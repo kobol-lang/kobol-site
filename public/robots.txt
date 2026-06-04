@@ -1,0 +1,33 @@
+# https://kobol-lang.org/robots.txt
+# Kobol — a modern, COBOL-inspired language for the JVM.
+
+# Search engines — full crawl allowed.
+User-agent: *
+Allow: /
+
+# AI / LLM crawlers — explicitly welcomed (see /llms.txt for a curated summary).
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://kobol-lang.org/sitemap.xml
