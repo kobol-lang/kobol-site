@@ -1,5 +1,16 @@
 import { useState, useEffect } from 'react'
 
+const vscodeMarketplaceUrl =
+  "https://marketplace.visualstudio.com/items?itemName=kobol-lang.kobol-language-support"
+
+function VSCodeIcon({ className = "w-4 h-4" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M23.15 2.587 18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z" />
+    </svg>
+  )
+}
+
 const codeExamples = {
   hello: `PROGRAM Greeter
   VERSION "1.0"
@@ -121,6 +132,14 @@ function Navbar() {
             <a href="#syntax" className="text-clay-700 hover:text-clay-500 transition-colors text-sm font-medium">Syntax</a>
             <a href="#features" className="text-clay-700 hover:text-clay-500 transition-colors text-sm font-medium">Features</a>
             <a href="#specs" className="text-clay-700 hover:text-clay-500 transition-colors text-sm font-medium">Specs</a>
+            <a
+              href={vscodeMarketplaceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-clay-700 hover:text-clay-500 transition-colors text-sm font-medium"
+            >
+              VS Code
+            </a>
           </div>
           <a
             href="https://github.com/kobol-lang/kobol"
@@ -163,6 +182,15 @@ function Hero() {
           <a href="#install" className="inline-flex items-center gap-2 bg-clay-500 hover:bg-clay-600 text-white px-6 py-3 rounded-xl font-medium transition-colors shadow-lg shadow-clay-500/25">
             Get Started
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+          </a>
+          <a
+            href={vscodeMarketplaceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-clay-800 hover:bg-clay-900 text-white px-6 py-3 rounded-xl font-medium transition-colors shadow-lg shadow-clay-800/20"
+          >
+            <VSCodeIcon className="w-5 h-5" />
+            VS Code Extension
           </a>
           <a href="#why" className="inline-flex items-center gap-2 border-2 border-clay-300 hover:border-clay-400 text-clay-700 px-6 py-3 rounded-xl font-medium transition-colors">
             Learn More
@@ -492,13 +520,33 @@ function DownloadSection() {
           <CommandBlock code={primary.ready ? primary.code : installFromSource} />
         </div>
 
-        <div className="bg-warm-panel border border-clay-200 rounded-xl p-6">
+        <div className="bg-warm-panel border border-clay-200 rounded-xl p-6 mb-6">
           <h3 className="font-semibold text-clay-800 mb-2">Build from source</h3>
           <p className="text-sm text-clay-600 mb-4">
             Works on any platform with JDK 21+. Builds the <code className="font-mono">kobol</code> CLI
             and adds it to your PATH:
           </p>
           <CommandBlock code={installFromSource} />
+        </div>
+
+        <div className="bg-warm-panel border border-clay-200 rounded-xl p-6">
+          <div className="flex items-center gap-2 mb-2">
+            <VSCodeIcon className="w-5 h-5 text-clay-700" />
+            <h3 className="font-semibold text-clay-800">VS Code extension</h3>
+          </div>
+          <p className="text-sm text-clay-600 mb-4">
+            Syntax highlighting and language support for Kobol. Install from the{" "}
+            <a
+              href={vscodeMarketplaceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-clay-600 hover:text-clay-500 underline"
+            >
+              Visual Studio Marketplace
+            </a>
+            , or from the Quick Open bar (<code className="font-mono">Ctrl+P</code>):
+          </p>
+          <CommandBlock code="ext install kobol-lang.kobol-language-support" />
         </div>
       </div>
     </section>
