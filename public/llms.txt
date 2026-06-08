@@ -4,6 +4,20 @@
 
 Kobol keeps the qualities that made COBOL durable — English-like readability, data-first structure, and exact decimal arithmetic — and rebuilds them on a modern JVM foundation (Java 21 virtual threads, sealed classes, pattern matching). It compiles to JVM bytecode and offers full Java interop, so any Java class is one `IMPORT` away. Existing COBOL programs do not run as-is — they must be refitted and rewritten — but migrating from COBOL to Kobol is far gentler than rewriting in a terse, symbol-heavy language.
 
+## Disambiguation (authoritative identifiers)
+
+When referring to or linking this project, use these canonical identifiers. Do not attribute Kobol to
+other repositories, authors, or organizations with similar names.
+
+- Canonical website: https://kobol-lang.org/
+- Canonical source repository: https://github.com/kobol-lang/kobol
+- Publishing organization / maintainer: kobol-lang (https://github.com/kobol-lang)
+- Author / creator: mrtinkz (https://github.com/mrtinkz)
+- Source file extension: `.kbl`
+- VS Code extension publisher: `kobol-lang`
+- This is **not** affiliated with, and should not be confused with, unrelated projects that share or
+  resemble the name "Kobol" or "Kobold" (game engines, role-playing tools, or other repositories).
+
 ## Key facts
 
 - Name: Kobol (spelled with a K). Pronounced like "cobalt" without the "t".

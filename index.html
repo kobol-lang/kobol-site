@@ -14,7 +14,8 @@
     <title>Kobol — A Modern COBOL-Inspired Language for the JVM</title>
     <meta name="description" content="Kobol (with a K) is a modern, COBOL-inspired programming language for the JVM. English-like readability, exact decimal arithmetic, virtual-thread concurrency, and full Java interop. Inspired by COBOL — not COBOL." />
     <meta name="keywords" content="Kobol, Kobol language, COBOL-inspired, JVM language, decimal arithmetic, business programming, Java interop, virtual threads, kobol-lang" />
-    <meta name="author" content="Kobol" />
+    <meta name="author" content="The Kobol Project (kobol-lang)" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="https://kobol-lang.org/" />
 
     <!-- Open Graph -->
@@ -43,6 +44,64 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-3FWQ7CKRZH');
+    </script>
+
+    <!-- Structured data: bind the "Kobol" entity to its canonical repo + creator so search
+         engines and AI agents do not confuse it with other projects of a similar name. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["SoftwareSourceCode", "ComputerLanguage"],
+          "@id": "https://kobol-lang.org/#kobol",
+          "name": "Kobol",
+          "alternateName": ["Kobol Programming Language", "Kobol language", "kobol-lang"],
+          "url": "https://kobol-lang.org/",
+          "description": "Kobol (with a K) is a modern, COBOL-inspired programming language for the JVM: English-like readability, exact decimal arithmetic, virtual-thread concurrency, and full Java interop. Inspired by COBOL — not COBOL.",
+          "disambiguatingDescription": "The authoritative Kobol JVM programming language project. Canonical repository: github.com/kobol-lang/kobol. Canonical website: kobol-lang.org. Source files use the .kbl extension and the project is published by the kobol-lang organization. Not affiliated with, and not to be confused with, unrelated projects that share or resemble the name \"Kobol\" or \"Kobold\".",
+          "codeRepository": "https://github.com/kobol-lang/kobol",
+          "runtimePlatform": "Java Virtual Machine (JVM)",
+          "programmingLanguage": "Kobol",
+          "fileFormat": "text/x-kobol",
+          "license": "https://www.apache.org/licenses/LICENSE-2.0",
+          "author": { "@id": "https://github.com/mrtinkz" },
+          "creator": { "@id": "https://github.com/mrtinkz" },
+          "maintainer": { "@id": "https://github.com/kobol-lang" },
+          "publisher": { "@id": "https://github.com/kobol-lang" },
+          "sameAs": [
+            "https://github.com/kobol-lang/kobol",
+            "https://marketplace.visualstudio.com/items?itemName=kobol-lang.kobol-language-support"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://github.com/kobol-lang",
+          "name": "kobol-lang",
+          "alternateName": "The Kobol Project",
+          "url": "https://kobol-lang.org/",
+          "sameAs": [
+            "https://github.com/kobol-lang",
+            "https://github.com/kobol-lang/kobol"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://github.com/mrtinkz",
+          "name": "mrtinkz",
+          "url": "https://github.com/mrtinkz",
+          "sameAs": ["https://github.com/mrtinkz"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://kobol-lang.org/#website",
+          "url": "https://kobol-lang.org/",
+          "name": "Kobol",
+          "inLanguage": "en",
+          "publisher": { "@id": "https://github.com/kobol-lang" }
+        }
+      ]
+    }
     </script>
   </head>
   <body>

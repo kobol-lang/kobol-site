@@ -128,6 +128,7 @@ function Navbar() {
           <div className="hidden sm:flex items-center gap-6">
             <a href="#why" className="text-clay-700 hover:text-clay-500 transition-colors text-sm font-medium">Why</a>
             <a href="#principles" className="text-clay-700 hover:text-clay-500 transition-colors text-sm font-medium">Principles</a>
+            <a href="#blog" className="text-clay-700 hover:text-clay-500 transition-colors text-sm font-medium">Blog</a>
             <a href="#install" className="text-clay-700 hover:text-clay-500 transition-colors text-sm font-medium">Install</a>
             <a href="#syntax" className="text-clay-700 hover:text-clay-500 transition-colors text-sm font-medium">Syntax</a>
             <a href="#features" className="text-clay-700 hover:text-clay-500 transition-colors text-sm font-medium">Features</a>
@@ -290,6 +291,79 @@ function PrinciplesSection() {
   )
 }
 
+function BlogSection() {
+  return (
+    <section id="blog" className="py-20 sm:py-28 px-4">
+      <div className="max-w-3xl mx-auto">
+        <div className="text-sm font-medium text-clay-500 uppercase tracking-wide mb-3">From the blog</div>
+        <SectionTitle>The Kobol Project</SectionTitle>
+        <div className="flex items-center gap-3 text-sm text-clay-500 mb-10">
+          <span>The Kobol Project</span>
+          <span aria-hidden="true">·</span>
+          <time dateTime="2026-06-08">June 8, 2026</time>
+        </div>
+
+        <article className="space-y-6 text-clay-700 text-lg leading-relaxed">
+          <p>
+            When I started Kobol, I wasn't trying to build the most powerful language in the room.
+            I was trying to build one more people could actually read.
+          </p>
+          <p>
+            There's a long tradition behind that choice. The early business languages were built on a simple
+            idea: that everyday people — not only trained specialists — should be able to sit down at a
+            computer and get real work done. That idea still holds up, and I built Kobol around it.
+          </p>
+
+          <p>
+            <strong className="text-clay-900">Plain words first.</strong> Kobol is written in everyday
+            English as much as a language can be. You say what you mean — <code className="font-mono text-clay-800">DISPLAY</code>,{" "}
+            <code className="font-mono text-clay-800">ADD</code>, <code className="font-mono text-clay-800">MOVE</code>,{" "}
+            <code className="font-mono text-clay-800">FOR EACH</code> — and the program does that thing. If you can
+            describe the work in a sentence, you're most of the way to writing it. I'd rather you spend your
+            thinking on the problem in front of you than on decoding punctuation.
+          </p>
+          <p>
+            <strong className="text-clay-900">Less like a math proof, more like a memo.</strong> A lot of
+            languages ask you to think like a mathematician before you've thought like a person. Kobol doesn't.
+            The code is shaped like the work it describes: records that look like the forms on your desk, steps
+            that read from top to bottom, money that adds up the way money is supposed to. You don't need a
+            background in symbols and theory to get something useful done here.
+          </p>
+          <p>
+            <strong className="text-clay-900">Easy to pick up, even when that costs some power.</strong> This
+            is a real trade, and I made it on purpose. There are sharper, shorter languages out there, and for
+            some jobs they're the right call. Kobol chooses the gentle slope. If staying approachable means
+            leaving a clever shortcut on the table, that's a price I'll pay. A tool more people can use beats a
+            tool fewer people can show off with.
+          </p>
+          <p>
+            <strong className="text-clay-900">Open the door wider.</strong> The best ideas for a program often
+            live in the heads of the people closest to the work — the ones who know the invoices, the payroll,
+            the rules — not only the people who write code for a living. Kobol is built so those two groups can
+            meet in the same file and both follow it. The fewer people it shuts out, the better the software gets.
+          </p>
+          <p>
+            <strong className="text-clay-900">No camp, no allegiance.</strong> Kobol isn't here to win an
+            argument about how software "should" be written, and it isn't tied to any one vendor or platform.
+            It runs on the JVM because the JVM runs nearly everywhere — a practical choice, not a statement.
+            You should be able to bring it into your work on its own terms, and judge it on whether it helps.
+          </p>
+
+          <p>
+            That's the whole project, really. Keep it readable. Keep it honest about numbers. Keep the door
+            open. Everything else — the JVM speed, the Java interop, the concurrency, the testing built right
+            in — is there to serve those few simple promises.
+          </p>
+          <p>
+            I'm glad you're here. Come build something anyone can read.
+          </p>
+          <p className="text-clay-500">— The Kobol Project</p>
+        </article>
+      </div>
+    </section>
+  )
+}
+
 const syntaxTabs = [
   { id: "hello", label: "Hello World", code: codeExamples.hello },
   { id: "interop", label: "Java Interop", code: codeExamples.interop },
@@ -398,7 +472,7 @@ function SpecsSection() {
                 ["DECIMAL, MONEY", "0", "Exact fixed-point arithmetic (BigDecimal)"],
                 ["TEXT, TEXT(n)", '""', "UTF-8 string types"],
                 ["BOOLEAN", "FALSE", "Boolean values"],
-                ["DATE, TIME, DATETIME", "Current/zero", "Temporal types"],
+                ["DATE, TIME, DATETIME", "None (set explicitly)", "Temporal types"],
                 ["LIST OF T", "[]", "Generic list"],
                 ["MAP OF K TO V", "{}", "Key-value map"],
                 ["UUID", "Nil UUID", "RFC 4122 UUID"],
@@ -585,6 +659,7 @@ function App() {
         <Hero />
         <WhySection />
         <PrinciplesSection />
+        <BlogSection />
         <DownloadSection />
         <SyntaxSection />
         <FeaturesSection />
