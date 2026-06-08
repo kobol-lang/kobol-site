@@ -343,7 +343,7 @@ function BlogSection() {
             meet in the same file and both follow it. The fewer people it shuts out, the better the software gets.
           </p>
           <p>
-            <strong className="text-clay-900">No camp, no allegiance.</strong> Kobol isn't here to win an
+            <strong className="text-clay-900">Neutral by design.</strong> Kobol isn't here to win an
             argument about how software "should" be written, and it isn't tied to any one vendor or platform.
             It runs on the JVM because the JVM runs nearly everywhere — a practical choice, not a statement.
             You should be able to bring it into your work on its own terms, and judge it on whether it helps.
